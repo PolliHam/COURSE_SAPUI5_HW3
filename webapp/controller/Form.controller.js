@@ -9,6 +9,7 @@ sap.ui.define([
 			var OModel = new JSONModel();
 			this.getView().setModel(OModel);
 		},
+		
 		onFormSend: function () {
 			var oModel = this.getView().getModel();
 			var data = JSON.parse(oModel.getJSON());
