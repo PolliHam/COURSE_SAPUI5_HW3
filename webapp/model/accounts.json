@@ -1,0 +1,33 @@
+[{
+	"userName": "Polina",
+	"typeContibution": "EURO",
+	"depositAmount": 345634,
+	"typeUser": "Saving",
+	"pin": 6590,
+	"dateCreate": "2019-09-15T21:00:00.000Z",
+	"id": "7a1fe056c9a9e868"
+}, {
+	"userName": "Anna",
+	"typeContibution": "USD",
+	"depositAmount": 32343,
+	"typeUser": "Saving",
+	"pin": 2459,
+	"dateCreate": "2019-09-30T21:00:00.000Z",
+	"id": "65c142cde6312808"
+}, {
+	"userName": "Pavel",
+	"typeContibution": "BYN",
+	"depositAmount": 23234,
+	"typeUser": "Current",
+	"pin": 3932,
+	"dateCreate": "2019-09-30T21:00:00.000Z",
+	"id": "caee3ac0c84488b7"
+}, {
+	"userName": "Alexander",
+	"typeContibution": "EURO",
+	"depositAmount": 3434,
+	"typeUser": "Current",
+	"pin": 6420,
+	"dateCreate": "2019-10-01T21:00:00.000Z",
+	"id": "1e72541b5a81db9b"
+}]

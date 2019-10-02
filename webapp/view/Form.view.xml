@@ -2,11 +2,11 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content>
+				<sap.m.semantic:SemanticPage xmlns:sap.m.semantic="sap.m.semantic" title="{i18n>title}" id="page"  showSubHeader="false">
+					<sap.m.semantic:content>
 						<Toolbar>
 							<ToolbarSpacer/>
-								<Button id="btnNext" icon="sap-icon://navigation-right-arrow" text="{i18n>btnNextTask}" busyIndicatorSize="Auto" press="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'press':\{'navigation':\{'routeName':'Inputs'\}\}\}"/>
+							<Button xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="btnNext" icon="sap-icon://navigation-right-arrow" text="{i18n>btnNextTask}" busyIndicatorSize="Auto" press="onNavigate"/>
 						</Toolbar>
 						<form:SimpleForm editable="true" layout="ResponsiveGridLayout" id="form0" title="{i18n>title}">
 							<form:content>
@@ -30,7 +30,6 @@
 										<core:Item key="item-4-key" text="{i18n>BYN}" id="item3"/>
 									</items>
 								</ComboBox>
-	
 							</form:content>
 						</form:SimpleForm>
 						<Toolbar width="100%" id="toolbar1">
@@ -38,8 +37,8 @@
 								<Button text="{i18n>btnSend}" id="button1" icon="sap-icon://accept" press="onFormSend"/>
 							</content>
 						</Toolbar>
-					</content>
-				</Page>
+					</sap.m.semantic:content>
+				</sap.m.semantic:SemanticPage>
 			</pages>
 		</App>
 	</Shell>

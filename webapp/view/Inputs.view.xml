@@ -1,60 +1,63 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="ZSHN.COURSE_SAPUI5.controller.Inputs">
-	<App id="Inputs">
-		<pages>
-			<Page id="PageInputs" title="{i18n>InputsTitle}">
-				<content>
-					<Toolbar>
-						
-						<Button xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="btnTask2Back" class="nav_to" icon="sap-icon://navigation-left-arrow" text="{i18n>btnBackTask}" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Form'\}\}\}"/>
-						<ToolbarSpacer/>
-						<Button xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="btnTask2Next" class="nav_to" icon="sap-icon://navigation-right-arrow" text="{i18n>btnNextTask}" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Table'\}\}\}"/>
-						
-					</Toolbar>
-					<VBox>
-						<Label text="{i18n>lbActSel}"/>
-						<ActionSelect id="select1">
-							<items>
-								<core:Item text="{i18n>a1}"/>
-								<core:Item text="{i18n>a2}"/>
-							</items>
-						</ActionSelect>
-						<Label text="{i18n>lbCheckBox}"/>
-						<CheckBox id="checkbox1"/>
-						<Label text="{i18n>lbComboBox}"/>
-						<ComboBox id="combobox1">
-							<items>
-								<core:Item text="{i18n>USD}"/>
-								<core:Item text="{i18n>EURO}"/>
-							</items>
-						</ComboBox>
-						<Label text="{i18n>lbDatePicker}"/>
-						<DatePicker xmlns="sap.m" width="50%" id="picker1"/>
-						<Label text="{i18n>lbFeedInput}"/>
-						<FeedInput placeholder="{i18n>phFeedback}" buttonTooltip="Send" id="feed1"/>
-						<Label text="{i18n>lbInput}"/>
-						<Input id="input1" width="50%" placeholder="{i18n>phInput}"/>
-						<Label text="{i18n>lbRadiobutton}"/>
-						<RadioButtonGroup xmlns="sap.m" columns="2" id="group0">
-							<buttons>
-								<RadioButton text="{i18n>savacc}" id="radio1"/>
-								<RadioButton text="{i18n>curacc}" id="radio2"/>
-							</buttons>
-						</RadioButtonGroup>
-						<Label text="{i18n>lbRatingindicator}"/>
-						<RatingIndicator id="rating1"/>
-						<Label text="{i18n>lbSearchField}"/>
-						<SearchField id="search1" width="50%" placeholder="{i18n>phInput}"/>
-						<Label text="{i18n>lbSlider}"/>
-						<Slider id="slider1" width="50%"/>
-						<Label text="{i18n>lbSwitch}"/>
-						<Switch id="switch1"/>
-						<Label text="{i18n>lbTextArea}"/>
-						<TextArea id="area1" placeholder="{i18n>phInput}"/>
-						<Label text="{i18n>lbTimePicker}"/>
-						<TimePicker id="time1"/>
-					</VBox>
-				</content>
-			</Page>
-		</pages>
-	</App>
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="ZSHN.COURSE_SAPUI5.controller.Inputs" displayBlock="true">
+	<Shell>
+		<App id="Inputs">
+			<pages>
+				<sap.m.semantic:SemanticPage xmlns:sap.m.semantic="sap.m.semantic" id="PageInputs" title="{i18n>InputsTitle}">
+					<sap.m.semantic:content>
+						<Toolbar>
+							<Button xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="btnBack" class="nav_to"
+								icon="sap-icon://navigation-left-arrow" text="{i18n>btnBackTask}" press="onNavigate"/>
+							<ToolbarSpacer/>
+							<Button xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="btnNext" class="nav_to"
+								icon="sap-icon://navigation-right-arrow" text="{i18n>btnNextTask}" press="onNavigate"/>
+						</Toolbar>
+						<VBox>
+							<Label text="{i18n>lbActSel}"/>
+							<ActionSelect id="select1">
+								<items>
+									<core:Item text="{i18n>a1}"/>
+									<core:Item text="{i18n>a2}"/>
+								</items>
+							</ActionSelect>
+							<Label text="{i18n>lbCheckBox}"/>
+							<CheckBox id="checkbox1"/>
+							<Label text="{i18n>lbComboBox}"/>
+							<ComboBox id="combobox1">
+								<items>
+									<core:Item text="{i18n>USD}"/>
+									<core:Item text="{i18n>EURO}"/>
+								</items>
+							</ComboBox>
+							<Label text="{i18n>lbDatePicker}"/>
+							<DatePicker xmlns="sap.m" width="50%" id="picker1"/>
+							<Label text="{i18n>lbFeedInput}"/>
+							<FeedInput placeholder="{i18n>phFeedback}" buttonTooltip="Send" id="feed1"/>
+							<Label text="{i18n>lbInput}"/>
+							<Input id="input1" width="50%" placeholder="{i18n>phInput}"/>
+							<Label text="{i18n>lbRadiobutton}"/>
+							<RadioButtonGroup xmlns="sap.m" columns="2" id="group0">
+								<buttons>
+									<RadioButton text="{i18n>savacc}" id="radio1"/>
+									<RadioButton text="{i18n>curacc}" id="radio2"/>
+								</buttons>
+							</RadioButtonGroup>
+							<Label text="{i18n>lbRatingindicator}"/>
+							<RatingIndicator id="rating1"/>
+							<Label text="{i18n>lbSearchField}"/>
+							<SearchField id="search1" width="50%" placeholder="{i18n>phInput}"/>
+							<Label text="{i18n>lbSlider}"/>
+							<Slider id="slider1" width="50%"/>
+							<Label text="{i18n>lbSwitch}"/>
+							<Switch id="switch1"/>
+							<Label text="{i18n>lbTextArea}"/>
+							<TextArea id="area1" placeholder="{i18n>phInput}"/>
+							<Label text="{i18n>lbTimePicker}"/>
+							<TimePicker id="time1"/>
+						</VBox>
+					</sap.m.semantic:content>
+				</sap.m.semantic:SemanticPage>
+			</pages>
+		</App>
+	</Shell>
 </mvc:View>

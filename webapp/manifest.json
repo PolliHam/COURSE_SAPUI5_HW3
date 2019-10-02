@@ -56,6 +56,10 @@
 				"settings": {
 					"bundleName": "ZSHN.COURSE_SAPUI5.i18n.i18n"
 				}
+			},
+			"accounts": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/accounts.json"
 			}
 		},
 		"resources": {
@@ -124,6 +128,10 @@
 				"Table": {
 					"viewType": "XML",
 					"viewName": "Table"
+				},
+				"test": {
+					"viewType": "XML",
+					"viewName": "test"
 				}
 			}
 		}
