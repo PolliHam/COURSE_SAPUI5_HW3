@@ -1,0 +1,46 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns="sap.m" controllerName="ZSHN.COURSE_SAPUI5.controller.Form" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Toolbar>
+							<ToolbarSpacer/>
+								<Button id="btnNext" icon="sap-icon://navigation-right-arrow" text="{i18n>btnNextTask}" busyIndicatorSize="Auto" press="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'press':\{'navigation':\{'routeName':'Inputs'\}\}\}"/>
+						</Toolbar>
+						<form:SimpleForm editable="true" layout="ResponsiveGridLayout" id="form0" title="{i18n>title}">
+							<form:content>
+								<Label text="{i18n>lbName}" id="lblName"/>
+								<Input width="50%" id="inName" value="{/userName}" placeholder="{i18n>phName}"/>
+								<Label text="{i18n>lbdepositAmount}" id="lbldepositAmount"/>
+								<Input width="50%" id="indepositAmount" value="{/depositAmount}" placeholder="{i18n>phdepositAmount}" type="Number"/>
+								<Label text="{i18n>lbAcc}" id="lbAcc"/>
+								<RadioButtonGroup columns="2" id="group0">
+									<buttons>
+										<RadioButton text="{i18n>savacc}" selected="{/typeUser}"/>
+										<RadioButton text="{i18n>curacc}" selected="{=!${/typeUser}}"/>
+									</buttons>
+								</RadioButtonGroup>
+								<Label text="{i18n>lbType}" id="lbType"/>
+								<ComboBox width="50%" id="inType" placeholder="{i18n>phType}" value="{/typeContibution}">
+									<items>
+										<core:Item key="item-1-key" text="{i18n>USD}" id="item0"/>
+										<core:Item key="item-2-key" text="{i18n>EURO}" id="item1"/>
+										<core:Item key="item-3-key" text="{i18n>RUB}" id="item2"/>
+										<core:Item key="item-4-key" text="{i18n>BYN}" id="item3"/>
+									</items>
+								</ComboBox>
+	
+							</form:content>
+						</form:SimpleForm>
+						<Toolbar width="100%" id="toolbar1">
+							<content>
+								<Button text="{i18n>btnSend}" id="button1" icon="sap-icon://accept" press="onFormSend"/>
+							</content>
+						</Toolbar>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

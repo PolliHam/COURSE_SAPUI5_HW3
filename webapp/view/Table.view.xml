@@ -1,0 +1,53 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZSHN.COURSE_SAPUI5.controller.Table"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App id="Table">
+		<pages>
+			<Page title="{i18n>TableTitle}">
+				<content>
+					<Toolbar>
+						<Button id="btnTask3Back" class="nav_to" icon="sap-icon://navigation-left-arrow" text="{i18n>btnBackTask}" />
+						<ToolbarSpacer/>
+					</Toolbar>
+					<Table items="{accounts>/}">
+						<columns>
+							<Column>
+								<Text text="{i18n>lbId}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbName}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbtypeContibution}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbdepositAmount}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbtypeUser}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbpin}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbdateCreate}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active" press="onItemPress">
+								<cells>
+									<Text text="{accounts>id}"/>
+									<Text text="{accounts>userName}"/>
+									<Text text="{accounts>typeContibution}"/>
+									<Text text="{accounts>depositAmount}"/>
+									<Text text="{accounts>typeUser}"/>
+									<Text text="{accounts>pin}"/>
+									<Text text="{accounts>dateCreate}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
